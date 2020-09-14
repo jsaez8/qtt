@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Dev
 
 ### Added
+<<<<<<< HEAD
 - Add functions for fitting power law distributions (#743)
+=======
+- Support for python 3.8 (#672)
+>>>>>>> feature/python38
 
 ### Changed
 - Replaced implementation of polyintersection from Polygon3 to shapely (#744)
