@@ -363,8 +363,11 @@ def _dataset_record_label(scanjob):
     Returns
         String with record label
     """
-    default_label = scanjob.get('scantype', 'default')
-    return scanjob.get('dataset_label', default_label)
+    if hasattr(scanjob, 'dataset_label'):
+        return scanjob.get('dataset_label')
+    else:
+        default_label = scanjob.get('scantype', 'default')
+        return scanjob.get('dataset_label', default_label)
 
 
 def scan1D(station, scanjob, location=None, liveplotwindow=None, plotparam='measured', verbose=1, extra_metadata=None):
